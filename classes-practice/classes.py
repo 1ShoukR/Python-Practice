@@ -54,3 +54,14 @@ class PlayerRoll(Player):
         self.controller = controller
         self.initiator = initiator
         self.sentinel = sentinel
+        self.player_info = Player()
+    def __str__(self):
+        return f"""Player Roll: {self.duelist}, {self.controller}, {self.initiator}, {self.sentinel}. 
+        Player Account info: {self.player_info.first_name}, {self.player_info.last_name}, {self.player_info.email}, {self.player_info.password}"""
+    
+
+rahmin = Player(first_name="Rahmin", last_name="Shoukoohi", email="test@test.com", password="test")
+print(rahmin)
+
+rahmin_info = PlayerRoll(duelist="Jett/Raze", controller="none", initiator="Fade", sentinel="Chamber/Sage")
+print(rahmin_info)
